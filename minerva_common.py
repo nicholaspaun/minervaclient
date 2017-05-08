@@ -71,8 +71,11 @@ def get_term_code(term):
 			part = term[:-5]
 		else:
 			part = term[:-4]
-		
-		part = part_codes[part.upper()]
+
+		try:		
+			part = part_codes[part.upper()]
+		except:
+			part = "13"
 
 	return year + part
 
